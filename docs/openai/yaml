@@ -1,0 +1,61 @@
+openapi: 3.1.0
+info:
+  title: Dicorner Scoring API
+  version: "1.0.0"
+servers:
+  - url: https://api.dicorner.com/v1
+paths:
+  /score:
+    post:
+      summary: Get real-time behavioral score + explanation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScoreRequest'
+      responses:
+        '200':
+          description: Score + explanation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScoreResponse'
+components:
+  schemas:
+    ScoreRequest:
+      type: object
+      properties:
+        account_id:
+          type: string
+        user_id:
+          type: string
+        events:
+          type: array
+          items:
+            type: object
+            properties:
+              name: {type: string}
+              timestamp: {type: string, format: date-time}
+              properties: {type: object}
+      required: [account_id, events]
+    FeatureContribution:
+      type: object
+      properties:
+        feature: {type: string}
+        value: {}
+        contribution: {type: number}
+    ScoreResponse:
+      type: object
+      properties:
+        prediction_id: {type: string}
+        score: {type: number}
+        risk_label: {type: string}
+        explanation:
+          type: object
+          properties:
+            contributions:
+              type: array
+              items:
+                $ref: '#/components/schemas/FeatureContribution'
+        generated_at: {type: string, format: date-time}
