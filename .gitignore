@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+
+# Next.js
+web/.next/
+web/out/
+
+# Node
+web/node_modules/
+node_modules/
+
+# Env
+.env
+.env.local
+.env*.local
+
+# Build
+web/build/
