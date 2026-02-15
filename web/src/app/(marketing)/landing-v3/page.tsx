@@ -146,42 +146,40 @@ const scenarios = {
 /* ═══════════════════════════════════════════════
    1. HERO
    ═══════════════════════════════════════════════ */
-function HeroSection() {
-  return (
-    <div className="bg-white border-b">
-      <div className="max-w-6xl mx-auto px-4 py-16">
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Stop Guessing Why Users Drop Off.<br />
-            <span className="text-blue-600">Understand Their Cognitive State. Deterministically Score It.</span>
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            DiCorner models decision fatigue, trust breakdowns, and drop-off intent
-            using interpretable ML + deterministic rules. Then tells you exactly
-            what to do, with confidence bounds.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/get-api-key"
-              className="bg-blue-600 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-              Get API Key
-            </Link>
-            <Link
-              href="/schedule-demo"
-              className="border border-gray-300 text-gray-700 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-colors"
-            >
-              Schedule a Demo
-            </Link>
+   function HeroSection() {
+    return (
+      <div className="bg-white border-b">
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5 leading-tight">
+              Stop Guessing Why Users Drop Off.<br />
+              <span className="text-blue-600">Understand Their Cognitive State. Deterministically Score It.</span>
+            </h1>
+            
+            {/* Restored flex container for the buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+              <Link
+                href="/get-api-key"
+                className="bg-blue-600 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              >
+                Get API Key
+              </Link>
+              <Link
+                href="/schedule-demo"
+                className="border border-gray-300 text-gray-700 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-colors"
+              >
+                Schedule a Demo
+              </Link>
+            </div>
+            
+            <p className="text-sm text-gray-500 mt-6">
+              Deterministic Scoring &bull; Explainable Decisions &bull; Audit-Ready Intelligence
+            </p>
           </div>
-          <p className="text-sm text-gray-500 mt-6">
-            Deterministic Scoring &bull; Explainable Decisions &bull; Audit-Ready Intelligence
-          </p>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
 /* ═══════════════════════════════════════════════
    2. TRUSTED BY COMPANIES WORLDWIDE
@@ -210,7 +208,7 @@ function TrustedBySection() {
     const metrics = [
       {
         icon: Clock,
-        stat: '90 → 12 days',
+        stat: '90 to 12 days',
         title: 'Time to Actionable Insight',
         description: 'Accelerated data pipeline from raw events to strategic decisions across pilot clients.',
       },
@@ -228,7 +226,7 @@ function TrustedBySection() {
       },
       {
         icon: Code,
-        stat: '3 wks → 5 days',
+        stat: '3 wks to 5 days',
         title: 'Developer Integration',
         description: 'From first API call to production-ready integration, reducing onboarding friction.',
       },
@@ -236,9 +234,16 @@ function TrustedBySection() {
   
     return (
       <div className="max-w-6xl mx-auto px-4 pt-8 pb-12">
-        <div className="text-center mb-8">
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Move beyond &ldquo;what happened&rdquo; to &ldquo;why it happened&rdquo; and &ldquo;what to do about it.&rdquo; Avoid customer churn by modeling decision fatigue, trust breakdowns, and drop-off intent using interpretable ML + deterministic rules.
+        <div className="max-w-4xl mx-auto text-center mb-10">
+          <p className="text-xl md:text-2xl font-semibold text-gray-900 leading-snug mb-3">
+            Move beyond what happened
+            <br/>
+            to <span className="text-blue-600">why it happened</span> and{' '}
+            <span className="text-blue-600">what to do about it.</span>
+          </p>
+          <p className="text-sm text-gray-500 max-w-2xl mx-auto">
+            Avoid customer churn by modeling decision fatigue, trust breakdowns,
+            and drop-off intent.
           </p>
         </div>
   
