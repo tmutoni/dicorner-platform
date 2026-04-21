@@ -1,0 +1,74 @@
+/* web/src/styles/maximus.css
+ * Scoped design tokens for the /maximus route group.
+ * Palette derived from the 2006 Maximus Energy Consultations Inc logo
+ * (public/maximus/logo.png): deep blue wordmark + fresh green accent.
+ */
+
+.maximus-root {
+  --mx-bg: #f8fafc;
+  --mx-surface: #ffffff;
+  --mx-ink: #0f172a;
+  --mx-ink-soft: #475569;
+  --mx-line: #e2e8f0;
+
+  /* Deep blue from MAXIMUS / CONSULTATIONS wordmark */
+  --mx-primary: #1e3a8a;
+  --mx-primary-ink: #ffffff;
+  --mx-primary-soft: #eff6ff;
+
+  /* Fresh green from ENERGY wordmark and tagline */
+  --mx-accent: #16a34a;
+  --mx-accent-soft: #f0fdf4;
+
+  background-color: var(--mx-bg);
+  color: var(--mx-ink);
+  min-height: 100vh;
+  color-scheme: light;
+}
+
+.maximus-root h1,
+.maximus-root h2,
+.maximus-root h3,
+.maximus-root h4 {
+  color: var(--mx-ink);
+  letter-spacing: -0.01em;
+}
+
+.maximus-root .mx-surface {
+  background: var(--mx-surface);
+  border: 1px solid var(--mx-line);
+}
+
+.maximus-root .mx-btn-primary {
+  background: var(--mx-primary);
+  color: var(--mx-primary-ink);
+  transition: filter 0.15s ease;
+}
+.maximus-root .mx-btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.maximus-root .mx-btn-outline {
+  background: transparent;
+  color: var(--mx-primary);
+  border: 1px solid var(--mx-primary);
+}
+.maximus-root .mx-btn-outline:hover {
+  background: var(--mx-primary-soft);
+}
+
+.maximus-root .mx-chip {
+  background: var(--mx-primary-soft);
+  color: var(--mx-primary);
+}
+.maximus-root .mx-chip-accent {
+  background: var(--mx-accent-soft);
+  color: var(--mx-accent);
+}
+
+.maximus-root .mx-ink-soft {
+  color: var(--mx-ink-soft);
+}
+.maximus-root .mx-line {
+  border-color: var(--mx-line);
+}
